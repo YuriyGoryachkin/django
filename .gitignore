@@ -2,3 +2,4 @@
 /venv/Lib/python3.6/site-packages/PyQt5/
 /venv/Lib/python3.6/site-packages/PyQt5-5.11.2.dist-info/
 /venv/Lib/python3.6/site-packages/PyQt5_sip-4.19.12.dist-info/
+*.cfg

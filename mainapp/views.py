@@ -18,7 +18,7 @@ def main(request):
     return render(request, 'mainapp/index.html', content)
 
 
-def check_server(username = 'suite', password = 'TsEUsItTe'):
+def check_server(username='suite', password='TsEUsItTe'):
     client = Client({'login': username, 'password': password})
     while True:
         status = 'disconnect'
@@ -95,7 +95,7 @@ def register(request):
     else:
         register_form = UserRegisterForm()
 
-    content ={
+    content = {
         'title': title,
         'register_form': register_form
     }

@@ -1,0 +1,58 @@
+#my_head{
+    height: 100px;
+    /*background: url(../../static/img/logo.jpg) center no-repeat;
+    background-size: cover;*/
+    background-color: #17a2b8;
+    margin: auto;
+    text-align: center;
+}
+
+#my_body{
+    margin: auto;
+    background-color: #f8f8f8;
+}
+
+#my_content{
+    box-sizing: border-box;
+    min-height: calc(100vh - 150px);
+    background-color: #ffc107;
+}
+.content{
+    width: 100vh;
+    margin: auto;
+    text-align: center;
+    border: 1px ridge red;
+}
+
+#footer{
+    height: 50px;
+    background-color: #002111;
+    color: #eaeaea;
+    clear: both;
+    /*margin-top: -50px;*/
+}
+#footer small{
+    float: right;
+    margin-top: 15px;
+    margin-right: 50px;
+}
+
+#clearfix{
+    clear: both;
+}
+ul{
+    float: left;
+}
+.head_center{
+    background-color: orange;
+}
+
+.status_server{
+    float: right;
+}
+.serv_on{
+    color: green;
+}
+.serv_off{
+    color: red;
+}

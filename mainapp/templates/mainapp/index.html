@@ -1,0 +1,14 @@
+{% extends 'mainapp/base.html' %}
+{% load staticfiles %}
+{% block title %}
+    {{ title|title }}
+{% endblock %}
+{% block centerheader %}
+    <h2 class="head_center">Логотипи название</h2>
+{% endblock %}
+{% block content %}
+    <div class="content">
+        <h2>Основный контент</h2>
+        {% include 'mainapp/include/inc_index.html' %}
+    </div>
+{% endblock %}

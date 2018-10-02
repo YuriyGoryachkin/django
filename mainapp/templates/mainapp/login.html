@@ -1,0 +1,21 @@
+{% extends 'mainapp/base.html' %}
+{% load staticfiles %}
+{% block title %}
+    {{ title }}
+{% endblock%}
+
+{% block content %}
+    {% if not user.is_authenticated %}
+        <div class="authlogin">
+            <form class="form-horizontal" action="{% url 'login' %}" method="post">
+                {% csrf_token %}
+                {{ login_form.as_p }}
+                <br>
+                <input type="submit" value="войти">
+            </form>
+            <button class="btn btn-round form-control">
+                <a href="{% url 'register' %}" class="">Зарегистрироваться</a>
+            </button>
+        </div>
+    {% endif %}
+{% endblock %}

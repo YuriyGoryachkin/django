@@ -1,0 +1,9 @@
+<div class="addon_index">
+    <h1>
+        Дополнительный контент
+        {% if user.is_authenticated %}
+            {{ user.username }}
+        {% endif %}
+    </h1>
+
+</div>

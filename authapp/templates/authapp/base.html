@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>
+        {% block title %}
+            BASE TITLE
+        {% endblock %}
+    </title>
+    {% block css %}
+        <link rel="stylesheet" href="{% static 'CSS/base.css' %}"/>
+        <link rel="stylesheet" href="{% static 'CSS/bootstrap.css' %}"/>
+    {% endblock %}
+    {% block js %}
+        <script src="{% static 'JS/bootstrap.js' %}"></script>
+    {% endblock %}
+</head>
+<body>
+    <div id="my_body">
+        <div id="my_head">
+            <div class="my_menu">
+                <div class="row">
+                    <div class="col-md-3">
+                        {% block leftheader %}
+                            {% include 'mainapp/include/inc_menu.html' %}
+                        {% endblock %}
+                    </div>
+                    <div class="col-md-6">
+                        {% block centerheader %}
+                        {% endblock %}
+                    </div>
+                    <div class="col-md-3">
+                        {% block rightheader %}
+                            {% include 'mainapp/include/inc_status_server.html' %}
+                        {% endblock %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div id="my_content">
+            <div class="row">
+                    {% block content %}
+                    {% endblock %}
+            </div>
+        </div>
+        <div class="clearfix"></div>
+        <div id="footer">
+            {% block footer %}
+                <small>&copy;Все права защищены</small>
+            {% endblock %}
+        </div>
+    </div>
+</body>
+</html>
